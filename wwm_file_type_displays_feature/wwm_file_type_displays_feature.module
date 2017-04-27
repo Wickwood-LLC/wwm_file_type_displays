@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the WWM File Type Displays Feature feature.
+ */
+
+include_once 'wwm_file_type_displays_feature.features.inc';

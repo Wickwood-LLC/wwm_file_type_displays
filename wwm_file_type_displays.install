@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function wwm_file_type_displays_install() {
+  require_once 'wwm_file_type_displays.module';
+
+  $view_modes = _wwm_file_type_displays_view_modes();
+
+  $settings = field_bundle_settings('file', 'video');
+
+  foreach ($view_modes as $view_mode_name => $label) {
+    $settings['view_modes'][$view_mode_name]['custom_settings'] = TRUE;
+  }
+
+  field_bundle_settings('node', 'article', $settings);
+}

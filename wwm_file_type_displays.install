@@ -14,5 +14,59 @@ function wwm_file_type_displays_install() {
     $settings['view_modes'][$view_mode_name]['custom_settings'] = TRUE;
   }
 
+  // Hide extra fiels in our view modes, except file itself.
+  $extra_fields = field_info_extra_fields('file', 'video', 'display');
+  foreach (array_keys($extra_fields) as $extra_field_name) {
+    foreach ($view_modes as $view_mode_name => $label) {
+      if ($extra_field_name != 'file') {
+        $settings['extra_fields']['display'][$extra_field_name][$view_mode_name]['visible'] = FALSE;
+      }
+    }
+  }
+  // Save settings to database.
   field_bundle_settings('file', 'video', $settings);
+
+  // Get all fields for the video file type.
+  // Then hide them in our view modes.
+  $field_instances = field_info_instances('file', 'video');
+  foreach ($field_instances as $field_instance) {
+    foreach ($view_modes as $view_mode_name => $label) {
+      $field_instance['display'][$view_mode_name]['type'] = 'hidden';
+    }
+    field_update_instance($field_instance);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function wwm_file_type_displays_uninstall() {
+  require_once 'wwm_file_type_displays.module';
+
+  $view_modes = _wwm_file_type_displays_view_modes();
+
+  $settings = field_bundle_settings('file', 'video');
+
+  foreach ($view_modes as $view_mode_name => $label) {
+    unset($settings['view_modes'][$view_mode_name]);
+  }
+
+  $extra_fields = field_info_extra_fields('file', 'video', 'display');
+  foreach (array_keys($extra_fields) as $extra_field_name) {
+    foreach ($view_modes as $view_mode_name => $label) {
+      unset($settings['extra_fields']['display'][$extra_field_name][$view_mode_name]);
+    }
+  }
+  // Save settings to database.
+  field_bundle_settings('file', 'video', $settings);
+
+  // Get all fields for the video file type.
+  // Then remove settings for our view mode.
+  $field_instances = field_info_instances('file', 'video');
+  foreach ($field_instances as $field_instance) {
+    foreach ($view_modes as $view_mode_name => $label) {
+      unset($field_instance['display'][$view_mode_name]);
+    }
+    field_update_instance($field_instance);
+  }
 }

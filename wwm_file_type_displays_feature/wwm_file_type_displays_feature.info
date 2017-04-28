@@ -1,12 +1,13 @@
 name = WWM File Type Displays Feature
 core = 7.x
 package = WWM
-version = 7.x-1.4
+version = 7.x-1.5
 dependencies[] = ctools
 dependencies[] = file_entity
 dependencies[] = media_oembed
 dependencies[] = media_vimeo
 dependencies[] = media_youtube
+dependencies[] = wwm_file_type_displays
 features[ctools][] = file_entity:file_default_displays:1
 features[features_api][] = api:2
 features[file_display][] = video__scale_240x135__file_field_file_video

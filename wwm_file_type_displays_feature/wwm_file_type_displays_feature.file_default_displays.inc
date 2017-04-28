@@ -424,6 +424,109 @@ function wwm_file_type_displays_feature_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__file_field_file_video';
+  $file_display->weight = -38;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'controls' => 1,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '320',
+    'height' => '240',
+    'preload' => 'metadata',
+    'multiple_file_behavior' => 'tags',
+  );
+  $export['video__scale_320x240__file_field_file_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_oembed';
+  $file_display->weight = -44;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '320',
+    'height' => '240',
+  );
+  $export['video__scale_320x240__media_oembed'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_oembed_thumbnail';
+  $file_display->weight = -43;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240',
+  );
+  $export['video__scale_320x240__media_oembed_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_vimeo_image';
+  $file_display->weight = -46;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240',
+  );
+  $export['video__scale_320x240__media_vimeo_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_vimeo_video';
+  $file_display->weight = -47;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '320',
+    'height' => '240',
+    'color' => '',
+    'protocol_specify' => 0,
+    'protocol' => 'https://',
+    'autoplay' => 0,
+    'loop' => 0,
+    'title' => 1,
+    'byline' => 1,
+    'portrait' => 1,
+    'api' => 0,
+  );
+  $export['video__scale_320x240__media_vimeo_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_youtube_image';
+  $file_display->weight = -48;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240',
+  );
+  $export['video__scale_320x240__media_youtube_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_320x240__media_youtube_video';
+  $file_display->weight = -49;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '320',
+    'height' => '240',
+    'theme' => 'dark',
+    'color' => 'red',
+    'autohide' => '2',
+    'captions' => FALSE,
+    'autoplay' => 0,
+    'loop' => 0,
+    'showinfo' => 1,
+    'modestbranding' => 0,
+    'rel' => 1,
+    'nocookie' => 0,
+    'protocol_specify' => 0,
+    'protocol' => 'https:',
+    'enablejsapi' => 0,
+    'origin' => '',
+  );
+  $export['video__scale_320x240__media_youtube_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__scale_360x270__file_field_file_video';
   $file_display->weight = -38;
   $file_display->status = TRUE;
@@ -733,6 +836,109 @@ function wwm_file_type_displays_feature_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__file_field_file_video';
+  $file_display->weight = -38;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'controls' => 1,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '480',
+    'height' => '360',
+    'preload' => 'metadata',
+    'multiple_file_behavior' => 'tags',
+  );
+  $export['video__scale_480x360__file_field_file_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_oembed';
+  $file_display->weight = -44;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '480',
+    'height' => '360',
+  );
+  $export['video__scale_480x360__media_oembed'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_oembed_thumbnail';
+  $file_display->weight = -43;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360',
+  );
+  $export['video__scale_480x360__media_oembed_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_vimeo_image';
+  $file_display->weight = -46;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360',
+  );
+  $export['video__scale_480x360__media_vimeo_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_vimeo_video';
+  $file_display->weight = -47;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '480',
+    'height' => '360',
+    'color' => '',
+    'protocol_specify' => 0,
+    'protocol' => 'https://',
+    'autoplay' => 0,
+    'loop' => 0,
+    'title' => 1,
+    'byline' => 1,
+    'portrait' => 1,
+    'api' => 0,
+  );
+  $export['video__scale_480x360__media_vimeo_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_youtube_image';
+  $file_display->weight = -48;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360',
+  );
+  $export['video__scale_480x360__media_youtube_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_480x360__media_youtube_video';
+  $file_display->weight = -49;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '480',
+    'height' => '360',
+    'theme' => 'dark',
+    'color' => 'red',
+    'autohide' => '2',
+    'captions' => FALSE,
+    'autoplay' => 0,
+    'loop' => 0,
+    'showinfo' => 1,
+    'modestbranding' => 0,
+    'rel' => 1,
+    'nocookie' => 0,
+    'protocol_specify' => 0,
+    'protocol' => 'https:',
+    'enablejsapi' => 0,
+    'origin' => '',
+  );
+  $export['video__scale_480x360__media_youtube_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__scale_560x315__file_field_file_video';
   $file_display->weight = -38;
   $file_display->status = TRUE;
@@ -1039,6 +1245,109 @@ function wwm_file_type_displays_feature_file_default_displays() {
     'origin' => '',
   );
   $export['video__scale_640x480_2__media_youtube_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__file_field_file_video';
+  $file_display->weight = -38;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'controls' => 1,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '640',
+    'height' => '480',
+    'preload' => 'metadata',
+    'multiple_file_behavior' => 'tags',
+  );
+  $export['video__scale_640x480__file_field_file_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_oembed';
+  $file_display->weight = -44;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '640',
+    'height' => '480',
+  );
+  $export['video__scale_640x480__media_oembed'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_oembed_thumbnail';
+  $file_display->weight = -43;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480',
+  );
+  $export['video__scale_640x480__media_oembed_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_vimeo_image';
+  $file_display->weight = -46;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480',
+  );
+  $export['video__scale_640x480__media_vimeo_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_vimeo_video';
+  $file_display->weight = -47;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '640',
+    'height' => '480',
+    'color' => '',
+    'protocol_specify' => 0,
+    'protocol' => 'https://',
+    'autoplay' => 0,
+    'loop' => 0,
+    'title' => 1,
+    'byline' => 1,
+    'portrait' => 1,
+    'api' => 0,
+  );
+  $export['video__scale_640x480__media_vimeo_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_youtube_image';
+  $file_display->weight = -48;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480',
+  );
+  $export['video__scale_640x480__media_youtube_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__scale_640x480__media_youtube_video';
+  $file_display->weight = -49;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '640',
+    'height' => '480',
+    'theme' => 'dark',
+    'color' => 'red',
+    'autohide' => '2',
+    'captions' => FALSE,
+    'autoplay' => 0,
+    'loop' => 0,
+    'showinfo' => 1,
+    'modestbranding' => 0,
+    'rel' => 1,
+    'nocookie' => 0,
+    'protocol_specify' => 0,
+    'protocol' => 'https:',
+    'enablejsapi' => 0,
+    'origin' => '',
+  );
+  $export['video__scale_640x480__media_youtube_video'] = $file_display;
 
   return $export;
 }

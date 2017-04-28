@@ -14,5 +14,5 @@ function wwm_file_type_displays_install() {
     $settings['view_modes'][$view_mode_name]['custom_settings'] = TRUE;
   }
 
-  field_bundle_settings('node', 'article', $settings);
+  field_bundle_settings('file', 'video', $settings);
 }

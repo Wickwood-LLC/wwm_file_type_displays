@@ -8,13 +8,10 @@ function _wwm_file_type_displays_view_modes() {
     'scale_320x180' => t('Scale 320 x 180 (16:9)'),
     'scale_240x135' => t('Scale 240 x 135 (16:9)'),
 
-    'scale_640x480_2' => t('Scale 640 x 480 (4:3)'), // Existing
-    'scale_640x480' => t('Scale 640 x 480 (4:3) - Existing'), // Replace
-    'scale_480x360_2' => t('Scale 480 x 360 (4:3)'), // Existing
-    'scale_480x360' => t('Scale 480 x 360 (4:3) - Existing'), // Replace
+    'scale_640x480' => t('Scale 640 x 480 (4:3)'), // Existing
+    'scale_480x360' => t('Scale 480 x 360 (4:3)'), // Existing
     'scale_360x270' => t('Scale 360 x 270 (4:3)'),
-    'scale_320x240_2' => t('Scale 320 x 240 (4:3)'), // Existing
-    'scale_320x240' => t('Scale 320 x 240 (4:3) - Existing'), // Replace
+    'scale_320x240' => t('Scale 320 x 240 (4:3)'), // Existing
     'scale_240x180' => t('Scale 240 x 180 (4:3)'),
   );
 }

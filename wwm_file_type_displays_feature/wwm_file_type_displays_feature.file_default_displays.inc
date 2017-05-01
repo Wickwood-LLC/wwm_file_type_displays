@@ -12,6 +12,64 @@ function wwm_file_type_displays_feature_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__file_field_file_video';
+  $file_display->weight = -38;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'controls' => 1,
+    'autoplay' => 0,
+    'loop' => 0,
+    'muted' => 0,
+    'width' => '',
+    'height' => '',
+    'preload' => 'metadata',
+    'multiple_file_behavior' => 'tags',
+  );
+  $export['video__media_original__file_field_file_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__media_oembed';
+  $file_display->weight = -42;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '',
+    'height' => '',
+  );
+  $export['video__media_original__media_oembed'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__media_oembed_thumbnail';
+  $file_display->weight = -41;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['video__media_original__media_oembed_thumbnail'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__media_vimeo_image';
+  $file_display->weight = -43;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['video__media_original__media_vimeo_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__media_youtube_image';
+  $file_display->weight = -45;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => '',
+  );
+  $export['video__media_original__media_youtube_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__scale_240x135__file_field_file_video';
   $file_display->weight = -38;
   $file_display->status = TRUE;

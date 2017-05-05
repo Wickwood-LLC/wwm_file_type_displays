@@ -2,17 +2,47 @@
 
 function _wwm_file_type_displays_view_modes() {
   return array(
-    'scale_640x360' => t('Scale 640 x 360 (16:9)'),
-    'scale_560x315' => t('Scale 560 x 315 (16:9)'),
-    'scale_480x270' => t('Scale 480 x 270 (16:9)'),
-    'scale_320x180' => t('Scale 320 x 180 (16:9)'),
-    'scale_240x135' => t('Scale 240 x 135 (16:9)'),
+    'scale_640x360' => array(
+      'title' => t('Scale 640 x 360 (16:9)'),
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_560x315' => array(
+      'title' => t('Scale 560 x 315 (16:9)'),
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_480x270' => array(
+      'title' => t('Scale 480 x 270 (16:9)'),
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_320x180' => array(
+      'title' => t('Scale 320 x 180 (16:9)'),
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_240x135' => array(
+      'title' => t('Scale 240 x 135 (16:9)'),
+      'file_types' => array('video', 'image'),
+    ),
 
-    'scale_640x480' => t('Scale 640 x 480 (4:3)'), // Existing
-    'scale_480x360' => t('Scale 480 x 360 (4:3)'), // Existing
-    'scale_360x270' => t('Scale 360 x 270 (4:3)'),
-    'scale_320x240' => t('Scale 320 x 240 (4:3)'), // Existing
-    'scale_240x180' => t('Scale 240 x 180 (4:3)'),
+    'scale_640x480' => array(
+      'title' => t('Scale 640 x 480 (4:3)'), // Existing
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_480x360' => array(
+      'title' => t('Scale 480 x 360 (4:3)'), // Existing
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_360x270' => array(
+      'title' => t('Scale 360 x 270 (4:3)'),
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_320x240' => array(
+      'title' => t('Scale 320 x 240 (4:3)'), // Existing
+      'file_types' => array('video', 'image'),
+    ),
+    'scale_240x180' => array(
+      'title' => t('Scale 240 x 180 (4:3)'),
+      'file_types' => array('video', 'image'),
+    ),
   );
 }
 
@@ -22,10 +52,10 @@ function _wwm_file_type_displays_view_modes() {
 function wwm_file_type_displays_entity_info_alter(&$entity_info) {
   $view_modes = _wwm_file_type_displays_view_modes();
 
-  foreach ($view_modes as $view_mode_name => $label) {
+  foreach ($view_modes as $view_mode_name => $view_mode_info) {
     $entity_info['file']['view modes'] += array(
       $view_mode_name => array(
-        'label' => $label,
+        'label' => $view_mode_info['title'],
         'custom settings' => FALSE,
       ),
     );

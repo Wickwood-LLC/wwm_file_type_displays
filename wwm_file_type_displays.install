@@ -8,32 +8,45 @@ function wwm_file_type_displays_install() {
 
   $view_modes = _wwm_file_type_displays_view_modes();
 
-  $settings = field_bundle_settings('file', 'video');
+  $file_types = array('image', 'video');
 
-  foreach ($view_modes as $view_mode_name => $label) {
-    $settings['view_modes'][$view_mode_name]['custom_settings'] = TRUE;
-  }
+  foreach ($file_types as $file_type) {
+    $settings = field_bundle_settings('file', $file_type);
 
-  // Hide extra fiels in our view modes, except file itself.
-  $extra_fields = field_info_extra_fields('file', 'video', 'display');
-  foreach (array_keys($extra_fields) as $extra_field_name) {
-    foreach ($view_modes as $view_mode_name => $label) {
-      if ($extra_field_name != 'file') {
-        $settings['extra_fields']['display'][$extra_field_name][$view_mode_name]['visible'] = FALSE;
+    foreach ($view_modes as $view_mode_name => $view_mode_info) {
+      if (!in_array($file_type, $view_mode_info['file_types'])) {
+        continue;
+      }
+      $settings['view_modes'][$view_mode_name]['custom_settings'] = TRUE;
+    }
+
+    // Hide extra fiels in our view modes, except file itself.
+    $extra_fields = field_info_extra_fields('file', $file_type, 'display');
+    foreach (array_keys($extra_fields) as $extra_field_name) {
+      foreach ($view_modes as $view_mode_name => $view_mode_info) {
+        if (!in_array($file_type, $view_mode_info['file_types'])) {
+          continue;
+        }
+        if ($extra_field_name != 'file') {
+          $settings['extra_fields']['display'][$extra_field_name][$view_mode_name]['visible'] = FALSE;
+        }
       }
     }
-  }
-  // Save settings to database.
-  field_bundle_settings('file', 'video', $settings);
+    // Save settings to database.
+    field_bundle_settings('file', $file_type, $settings);
 
-  // Get all fields for the video file type.
-  // Then hide them in our view modes.
-  $field_instances = field_info_instances('file', 'video');
-  foreach ($field_instances as $field_instance) {
-    foreach ($view_modes as $view_mode_name => $label) {
-      $field_instance['display'][$view_mode_name]['type'] = 'hidden';
+    // Get all fields for the file type.
+    // Then hide them in our view modes.
+    $field_instances = field_info_instances('file', $file_type);
+    foreach ($field_instances as $field_instance) {
+      foreach ($view_modes as $view_mode_name => $view_mode_info) {
+        if (!in_array($file_type, $view_mode_info['file_types'])) {
+          continue;
+        }
+        $field_instance['display'][$view_mode_name]['type'] = 'hidden';
+      }
+      field_update_instance($field_instance);
     }
-    field_update_instance($field_instance);
   }
 }
 
@@ -45,28 +58,41 @@ function wwm_file_type_displays_uninstall() {
 
   $view_modes = _wwm_file_type_displays_view_modes();
 
-  $settings = field_bundle_settings('file', 'video');
+  $file_types = array('image', 'video');
 
-  foreach ($view_modes as $view_mode_name => $label) {
-    unset($settings['view_modes'][$view_mode_name]);
-  }
+  foreach ($file_types as $file_type) {
+    $settings = field_bundle_settings('file', $file_type);
 
-  $extra_fields = field_info_extra_fields('file', 'video', 'display');
-  foreach (array_keys($extra_fields) as $extra_field_name) {
-    foreach ($view_modes as $view_mode_name => $label) {
-      unset($settings['extra_fields']['display'][$extra_field_name][$view_mode_name]);
+    foreach ($view_modes as $view_mode_name => $view_mode_info) {
+      if (!in_array($file_type, $view_mode_info['file_types'])) {
+        continue;
+      }
+      unset($settings['view_modes'][$view_mode_name]);
     }
-  }
-  // Save settings to database.
-  field_bundle_settings('file', 'video', $settings);
 
-  // Get all fields for the video file type.
-  // Then remove settings for our view mode.
-  $field_instances = field_info_instances('file', 'video');
-  foreach ($field_instances as $field_instance) {
-    foreach ($view_modes as $view_mode_name => $label) {
-      unset($field_instance['display'][$view_mode_name]);
+    $extra_fields = field_info_extra_fields('file', $file_type, 'display');
+    foreach (array_keys($extra_fields) as $extra_field_name) {
+      foreach ($view_modes as $view_mode_name => $view_mode_info) {
+        if (!in_array($file_type, $view_mode_info['file_types'])) {
+          continue;
+        }
+        unset($settings['extra_fields']['display'][$extra_field_name][$view_mode_name]);
+      }
     }
-    field_update_instance($field_instance);
+    // Save settings to database.
+    field_bundle_settings('file', $file_type, $settings);
+
+    // Get all fields for the file type.
+    // Then remove settings for our view mode.
+    $field_instances = field_info_instances('file', $file_type);
+    foreach ($field_instances as $field_instance) {
+      foreach ($view_modes as $view_mode_name => $view_mode_info) {
+        if (!in_array($file_type, $view_mode_info['file_types'])) {
+          continue;
+        }
+        unset($field_instance['display'][$view_mode_name]);
+      }
+      field_update_instance($field_instance);
+    }
   }
 }

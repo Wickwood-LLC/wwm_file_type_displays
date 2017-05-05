@@ -43,6 +43,67 @@ function _wwm_file_type_displays_view_modes() {
       'title' => t('Scale 240 x 180 (4:3)'),
       'file_types' => array('video', 'image'),
     ),
+
+    'polaroid_landscape' => array(
+      'title' => t('Polaroid landscape'),
+      'file_types' => array('image'),
+    ),
+    'polaroid_landscape_rotate_left' => array(
+      'title' => t('Polaroid landscape rotated left'),
+      'file_types' => array('image'),
+    ),
+    'polaroid_landscape_rotate_right' => array(
+      'title' => t('Polaroid landscape rotated right'),
+      'file_types' => array('image'),
+    ),
+    'polaroid_portrait' => array(
+      'title' => t('Polaroid portrait'),
+      'file_types' => array('image'),
+    ),
+    'polaroid_portrait_rotate_left' => array(
+      'title' => t('Polaroid portrait rotated left'),
+      'file_types' => array('image'),
+    ),
+    'polaroid_portrait_rotate_right' => array(
+      'title' => t('Polaroid portrait rotated right'),
+      'file_types' => array('image'),
+    ),
+    'scale_160x120' => array(
+      'title' => t('Scale 160 x 120 (4:3)'),
+      'file_types' => array('image'),
+    ),
+    'scale_160x120_rotate_left' => array(
+      'title' => t('Scale 160 x 120 rotated left'),
+      'file_types' => array('image'),
+    ),
+    'scale_160x120_rotate_right' => array(
+      'title' => t('Scale 160 x 120 rotated right'),
+      'file_types' => array('image'),
+    ),
+    'scale_320x240_rotate_left' => array(
+      'title' => t('Scale 320 x 240 rotated left'),
+      'file_types' => array('image'),
+    ),
+    'scale_320x240_rotate_right' => array(
+      'title' => t('Scale 320 x 240 rotated right'),
+      'file_types' => array('image'),
+    ),
+    'scale_480x360_rotate_left' => array(
+      'title' => t('Scale 480 x 360 rotated left'),
+      'file_types' => array('image'),
+    ),
+    'scale_480x360_rotate_right' => array(
+      'title' => t('Scale 480 x 360 rotated right'),
+      'file_types' => array('image'),
+    ),
+    'scale_640x480_rotate_left' => array(
+      'title' => t('Scale 640 x 480 rotated left'),
+      'file_types' => array('image'),
+    ),
+    'scale_640x480_rotate_right' => array(
+      'title' => t('Scale 640 x 480 rotated right'),
+      'file_types' => array('image'),
+    ),
   );
 }
 

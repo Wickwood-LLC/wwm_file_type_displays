@@ -12,9 +12,284 @@ function wwm_file_type_displays_feature_file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
-  $file_display->name = 'video__media_original__file_field_file_video';
-  $file_display->weight = -38;
+  $file_display->name = 'image__polaroid_landscape__file_field_image';
+  $file_display->weight = 0;
   $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-landscape-290x210',
+    'image_link' => '',
+  );
+  $export['image__polaroid_landscape__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__polaroid_landscape_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-landscape-290x210-rotate-left',
+    'image_link' => '',
+  );
+  $export['image__polaroid_landscape_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__polaroid_landscape_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-landscape-290x210-rotate-right',
+    'image_link' => '',
+  );
+  $export['image__polaroid_landscape_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__polaroid_portrait__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-portrait-210x270',
+    'image_link' => '',
+  );
+  $export['image__polaroid_portrait__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__polaroid_portrait_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-portrait-210x270-rotate-left',
+    'image_link' => '',
+  );
+  $export['image__polaroid_portrait_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__polaroid_portrait_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'polaroid-portrait-210x270-rotate-right',
+    'image_link' => '',
+  );
+  $export['image__polaroid_portrait_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_160x120__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_160x120',
+    'image_link' => '',
+  );
+  $export['image__scale_160x120__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_160x120_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_160x120_rotate_left_7',
+    'image_link' => '',
+  );
+  $export['image__scale_160x120_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_160x120_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_160x120_rotate_right_7',
+    'image_link' => '',
+  );
+  $export['image__scale_160x120_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_240x135__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_240x135',
+    'image_link' => '',
+  );
+  $export['image__scale_240x135__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_240x180__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_240x180',
+    'image_link' => '',
+  );
+  $export['image__scale_240x180__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_320x180__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x180',
+    'image_link' => '',
+  );
+  $export['image__scale_320x180__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_320x240__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240',
+    'image_link' => '',
+  );
+  $export['image__scale_320x240__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_320x240_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240_rotate_left_7',
+    'image_link' => '',
+  );
+  $export['image__scale_320x240_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_320x240_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_320x240_rotate_right_7',
+    'image_link' => '',
+  );
+  $export['image__scale_320x240_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_360x270__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_360x270',
+    'image_link' => '',
+  );
+  $export['image__scale_360x270__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_480x270__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x270',
+    'image_link' => '',
+  );
+  $export['image__scale_480x270__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_480x360__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360',
+    'image_link' => '',
+  );
+  $export['image__scale_480x360__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_480x360_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360_rotate_left_7',
+    'image_link' => '',
+  );
+  $export['image__scale_480x360_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_480x360_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_480x360_rotate_right_7',
+    'image_link' => '',
+  );
+  $export['image__scale_480x360_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_560x315__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_560x315',
+    'image_link' => '',
+  );
+  $export['image__scale_560x315__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_640x360__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x360',
+    'image_link' => '',
+  );
+  $export['image__scale_640x360__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_640x480__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480',
+    'image_link' => '',
+  );
+  $export['image__scale_640x480__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_640x480_rotate_left__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480_rotate_left_7',
+    'image_link' => '',
+  );
+  $export['image__scale_640x480_rotate_left__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'image__scale_640x480_rotate_right__file_field_image';
+  $file_display->weight = 0;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'scale_640x480_rotate_right_7',
+    'image_link' => '',
+  );
+  $export['image__scale_640x480_rotate_right__file_field_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__media_original__file_field_file_video';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
   $file_display->settings = array(
     'controls' => 1,
     'autoplay' => 0,
@@ -22,7 +297,7 @@ function wwm_file_type_displays_feature_file_default_displays() {
     'muted' => 0,
     'width' => '',
     'height' => '',
-    'preload' => 'metadata',
+    'preload' => '',
     'multiple_file_behavior' => 'tags',
   );
   $export['video__media_original__file_field_file_video'] = $file_display;
@@ -30,19 +305,19 @@ function wwm_file_type_displays_feature_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_original__media_oembed';
-  $file_display->weight = -42;
-  $file_display->status = TRUE;
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
   $file_display->settings = array(
-    'width' => '',
-    'height' => '',
+    'width' => '640',
+    'height' => '360',
   );
   $export['video__media_original__media_oembed'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_original__media_oembed_thumbnail';
-  $file_display->weight = -41;
-  $file_display->status = TRUE;
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
   $file_display->settings = array(
     'image_style' => '',
   );
@@ -51,7 +326,7 @@ function wwm_file_type_displays_feature_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_original__media_vimeo_image';
-  $file_display->weight = -43;
+  $file_display->weight = -32;
   $file_display->status = TRUE;
   $file_display->settings = array(
     'image_style' => '',
@@ -61,7 +336,7 @@ function wwm_file_type_displays_feature_file_default_displays() {
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__media_original__media_youtube_image';
-  $file_display->weight = -45;
+  $file_display->weight = -34;
   $file_display->status = TRUE;
   $file_display->settings = array(
     'image_style' => '',
